@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
-import css from "./SearchForm.module.css";
+import css from "./SearchBar.module.css";
 
-export default function SearchForm({ onSearch }) {
+export default function SearchBar({ onSearch }) {
   return (
     <Formik
       initialValues={{ image: "" }}
@@ -19,7 +19,9 @@ export default function SearchForm({ onSearch }) {
           autoFocus
           placeholder="Search images and photos"
         />
-        <button type="submit">Search</button>
+        <button className={css.searchBtn} type="submit">
+          Search
+        </button>
       </Form>
     </Formik>
   );
